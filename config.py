@@ -18,7 +18,7 @@ class ProductionConfig(Config):
     dbhost = '***'  
     dbuser = '***' 
     dbpass = '***'  
-    dbname = '***'   
+    dbname = '****'   
     SQLALCHEMY_DATABASE_URI = 'mysql://' + dbuser  + ':' + dbpass + '@' + dbhost + '/' + dbname  
 
 config = {
