@@ -24,7 +24,7 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
-config.py
+
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -58,6 +58,7 @@ local_settings.py
 # Flask stuff:
 instance/
 .webassets-cache
+config.py
 
 # Scrapy stuff:
 .scrapy
