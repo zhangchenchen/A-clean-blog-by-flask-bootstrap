@@ -7,6 +7,10 @@ from . import auth
 from ..models import User
 from .forms import LoginForm
 
+@login_manager.user_loader
+def load_user(userid):
+    return User.get(userid)
+
 @auth.route('/login',methods = ['GET','POST'])
 def login():
     form = LoginForm()
@@ -16,7 +20,7 @@ def login():
             login_user(user)
             return redirect(request.args.get('next') or url_for('main.index'))
         flash('Invalid username or password')
-    return render_template('auth/login.html', form=form)
+    return render_template('login.html', form=form)
 
 @auth.route('/logout')
 @login_required
