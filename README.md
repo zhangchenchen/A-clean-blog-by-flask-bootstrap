@@ -32,7 +32,6 @@ a small blog coding by flask &amp; bootstrap, keep simple and clean
 
 
 
-# 简易博客
 
 ## 简介
 
