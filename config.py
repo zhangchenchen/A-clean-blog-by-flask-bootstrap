@@ -15,10 +15,10 @@ class Config:
 class ProductionConfig(Config):
     DEBUG = True
     #SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or 'sqlite:///' + os.path.join(basedir, 'data.sqlite')
-    dbhost = 'pekingzccdb.cjiwhis5e4uf.us-west-2.rds.amazonaws.com'  
-    dbuser = 'pekingzcc' ### 
-    dbpass = 'zhangchen130826'  
-    dbname = 'pekingzcc'   
+    dbhost = '***'  
+    dbuser = '***' 
+    dbpass = '***'  
+    dbname = '***'   
     SQLALCHEMY_DATABASE_URI = 'mysql://' + dbuser  + ':' + dbpass + '@' + dbhost + '/' + dbname  
 
 config = {
