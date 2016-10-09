@@ -17,7 +17,7 @@ class ProductionConfig(Config):
     DEBUG = True
     #SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or 'sqlite:///' + os.path.join(basedir, 'data.sqlite')
     dbhost = 'pekingzccdb.cjiwhis5e4uf.us-west-2.rds.amazonaws.com'  
-    dbuser = 'pekingzcc'  
+    dbuser = 'pekingzcc' ### 
     dbpass = 'zhangchen130826'  
     dbname = 'pekingzcc'
     #SQLALCHEMY_DATABASE_URI = 'mysql://' + 'pekingzcc'  + ':' + 'zhangchen130826' + '@' + 'pekingzccdb.cjiwhis5e4uf.us-west-2.rds.amazonaws.com' + '/' +'pekingzcc'  
