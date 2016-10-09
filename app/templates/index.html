@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% import "_macros.html" as macros %}
+
+
+
+{% block page_image %}
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url('http://7xrnwq.com1.z0.glb.clouddn.com/home-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>Clean Blog</h1>
+                        <hr class="small">
+                        <span class="subheading">A Clean Blog Theme by Start Bootstrap</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+{% endblock %}
+
+{% block main_content %}
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                {% for post in posts %}
+                <div class="post-preview">
+                    <a href="{{ url_for('.post',id=post.id) }}">
+                        <h2 class="post-title">
+                            {{ post.head }}
+                        </h2>
+                        <h3 class="post-subtitle">
+                            {% if post.body_html %}
+                                {{ post.body_html | safe | truncate(60,  killwords=False, end='...') }}
+                            {% endif %}
+                        </h3>
+                    </a>
+                    <p class="post-meta">Posted  on {{ moment(post.timestamp).format('YYYY-MM-DD HH:mm:ss') }}</p>
+                </div>
+                <hr>
+                {% endfor %}
+                <!-- Pager -->
+                {{ macros.pagination_widget(pagination,'.index') }}
+            </div>
+        </div>
+    </div>
+
+    <hr>
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block head %}
+    {{ super() }}
+	<link href="http://oeptotikb.bkt.clouddn.com/404_style.css" rel="stylesheet" type="text/css"  media="all" />
+{% endblock %}
+
+{% block title %}
+    error!
+{% endblock %}
+
+{% block main_content %}
+		<!--start-wrap--->
+		<div class="wrap">
+			<!---start-header---->
+				<div class="header">
+					<div class="logo">
+						<h1><a href="#">Ohh</a></h1>
+					</div>
+				</div>
+			<!---End-header---->
+			<!--start-content------>
+			<div class="content">
+				<img src="http://7xrnwq.com1.z0.glb.clouddn.com/404-error-img.png" title="error" />
+				<p><span><label>O</label>hh.....</span>You Requested the page that is no longer There.</p>
+				<a href="/">Back To Home</a>
+				<div class="copy-right">
+					<p></p>
+				</div>
+   			</div>
+			<!--End-Cotent------>
+		</div>
+		<!--End-wrap--->
+{% endblock %}

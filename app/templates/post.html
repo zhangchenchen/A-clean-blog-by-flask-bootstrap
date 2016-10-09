@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+
+{% block page_image %}
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url('http://7xrnwq.com1.z0.glb.clouddn.com/post-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="post-heading">
+                        <h1>{{ post.head }}</h1>
+                        <span class="meta">Posted by  on {{ moment(post.timestamp).format('YYYY-MM-DD HH:mm:ss') }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+{% endblock %}
+
+{% block main_content %}
+    <!-- Post Content -->
+    <article>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    {% if post.body_html %}
+                        {{ post.body_html | safe }}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <hr>
+{% endblock %}
