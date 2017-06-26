@@ -22,14 +22,6 @@ a small blog coding by flask &amp; bootstrap, keep simple and clean
 - python manage.py db upgrade
 - python manage.py runserver
 
-## development log
-
-- 2016.10.7-8 :
-
-
-
-## deploy
-
 
 
 
@@ -57,6 +49,5 @@ a small blog coding by flask &amp; bootstrap, keep simple and clean
 - python manage.py db upgrade
 - python manage.py runserver
 
-##开发日志
 
 
